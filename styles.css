@@ -18,7 +18,7 @@ header {
 }
 
 #contenedor-proyectos {
-  display: flex;
+  /*display: flex;*/
 }
 /*selector descendiente*/
 nav ul {
@@ -43,4 +43,56 @@ nav ul li a {
   border-radius: 8px;
   background: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+  width: 300px;
+}
+/*Selector ID (#) seleccionar un elemento especifico*/
+#contenedor-proyectos {
+  display: flex;
+  flex-wrap: wrap; /*adaptacion a la pantalla, se va acomodando*/
+  justify-content: center; /*centrar el contenido*/
+  gap: 20px; /*espacios entre tarjetas*/
+  padding: 20px;
+  background: skyblue;
+}
+
+/*media querys*/
+@media screen and (max-width: 600px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+  .proyecto-card {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  #contenedor-proyectos {
+    justify-content: space-around;
+    gap: 10px;
+  }
+  .proyecto-card {
+    width: 45%;
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121212;
+    color: #e0e0e0;
+  }
+  header {
+    background: #1f1f1f;
+  }
+  .proyecto-card {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    color: #e0e0e0;
+  }
+  .proyecto-card a {
+    color: blue;
+  }
 }
