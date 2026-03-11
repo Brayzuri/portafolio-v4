@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*Afecta todo el cuerpo de la pagina*/
+body {
+  font-family: "Poppins" sans-serif;
+  line-height: 1.6;
+  background: white;
+}
+/*aaplicar estilo al encabezado*/
+header {
+  background: silver;
+  color: blue;
+  padding: 20px;
+  text-align: center;
+}
+
+#contenedor-proyectos {
+  display: flex;
+}
+/*selector descendiente*/
+nav ul {
+  list-style: none;
+}
+/*para los elementos li*/
+nav ul li {
+  display: inline-block;
+  margin: 20px;
+}
+/*selector de los enlaces dentro del nav*/
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+/*Selector de clase*/
+.proyecto-card {
+  border: 1px solid gray;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
+}
